@@ -1,8 +1,9 @@
 package cmd
 
 import (
-	"blocky/config"
 	"time"
+
+	"github.com/bdittmer/blocky/config"
 
 	. "github.com/onsi/ginkgo"
 )

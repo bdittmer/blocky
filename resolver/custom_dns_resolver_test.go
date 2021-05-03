@@ -1,9 +1,10 @@
 package resolver
 
 import (
-	"blocky/config"
-	. "blocky/helpertest"
 	"net"
+
+	"github.com/bdittmer/blocky/config"
+	. "github.com/bdittmer/blocky/helpertest"
 
 	"github.com/miekg/dns"
 	. "github.com/onsi/ginkgo"

@@ -1,14 +1,15 @@
 package resolver
 
 import (
-	"blocky/config"
-	"blocky/util"
 	"io/ioutil"
 	"net"
 	"net/http"
 	"net/http/httptest"
 	"strconv"
 	"strings"
+
+	"github.com/bdittmer/blocky/config"
+	"github.com/bdittmer/blocky/util"
 
 	"github.com/miekg/dns"
 	"github.com/stretchr/testify/mock"

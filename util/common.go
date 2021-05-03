@@ -8,7 +8,7 @@ import (
 	"sort"
 	"strings"
 
-	"blocky/log"
+	"github.com/bdittmer/blocky/log"
 
 	"github.com/miekg/dns"
 	"github.com/sirupsen/logrus"

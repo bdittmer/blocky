@@ -1,7 +1,7 @@
 package resolver
 
 import (
-	"blocky/config"
+	"github.com/bdittmer/blocky/config"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"

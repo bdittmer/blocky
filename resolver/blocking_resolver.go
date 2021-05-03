@@ -1,11 +1,6 @@
 package resolver
 
 import (
-	"blocky/api"
-	"blocky/config"
-	"blocky/evt"
-	"blocky/lists"
-	"blocky/util"
 	"fmt"
 	"net"
 	"reflect"
@@ -13,7 +8,13 @@ import (
 	"strings"
 	"time"
 
-	"blocky/log"
+	"github.com/bdittmer/blocky/api"
+	"github.com/bdittmer/blocky/config"
+	"github.com/bdittmer/blocky/evt"
+	"github.com/bdittmer/blocky/lists"
+	"github.com/bdittmer/blocky/util"
+
+	"github.com/bdittmer/blocky/log"
 
 	"github.com/miekg/dns"
 	"github.com/sirupsen/logrus"

@@ -1,8 +1,9 @@
 package api_test
 
 import (
-	. "blocky/log"
 	"testing"
+
+	. "github.com/bdittmer/blocky/log"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
