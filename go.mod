@@ -1,4 +1,4 @@
-module blocky
+module github.com/bdittmer/blocky
 
 go 1.16
 

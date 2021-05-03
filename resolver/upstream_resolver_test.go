@@ -1,13 +1,14 @@
 package resolver
 
 import (
-	"blocky/config"
-	. "blocky/helpertest"
-	"blocky/util"
 	"crypto/tls"
 	"fmt"
 	"net/http"
 	"time"
+
+	"github.com/bdittmer/blocky/config"
+	. "github.com/bdittmer/blocky/helpertest"
+	"github.com/bdittmer/blocky/util"
 
 	"github.com/miekg/dns"
 	. "github.com/onsi/ginkgo"

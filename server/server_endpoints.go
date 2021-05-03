@@ -1,12 +1,6 @@
 package server
 
 import (
-	"blocky/api"
-	"blocky/config"
-	"blocky/log"
-	"blocky/resolver"
-	"blocky/util"
-	"blocky/web"
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
@@ -15,6 +9,13 @@ import (
 	"net"
 	"net/http"
 	"strings"
+
+	"github.com/bdittmer/blocky/api"
+	"github.com/bdittmer/blocky/config"
+	"github.com/bdittmer/blocky/log"
+	"github.com/bdittmer/blocky/resolver"
+	"github.com/bdittmer/blocky/util"
+	"github.com/bdittmer/blocky/web"
 
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"

@@ -17,7 +17,7 @@ func NewVersionCommand() *cobra.Command {
 }
 
 func printVersion(_ *cobra.Command, _ []string) {
-	fmt.Println("blocky")
+	fmt.Println("github.com/bdittmer/blocky")
 	fmt.Printf("Version: %s\n", version)
 	fmt.Printf("Build time: %s\n", buildTime)
 }

@@ -11,7 +11,7 @@
     {
       "name": "VAR_BLOCKY_URL",
       "type": "constant",
-      "label": "blocky API URL",
+      "label": "github.com/bdittmer/blocky API URL",
       "value": "",
       "description": ""
     }
@@ -82,7 +82,7 @@
     {
       "icon": "external link",
       "tags": [],
-      "title": "blocky @ GitHub",
+      "title": "github.com/bdittmer/blocky @ GitHub",
       "tooltip": "open GitHub repo",
       "type": "link",
       "url": "https://github.com/0xERR0R/blocky"
@@ -155,7 +155,7 @@
       "pluginVersion": "7.3.1",
       "targets": [
         {
-          "expr": "sum(up{job=\"blocky\"})",
+          "expr": "sum(up{job=\"github.com/bdittmer/blocky\"})",
           "instant": true,
           "interval": "",
           "legendFormat": "",
@@ -240,7 +240,7 @@
       "pluginVersion": "7.3.1",
       "targets": [
         {
-          "expr": "blocky_blocking_enabled",
+          "expr": "github.com/bdittmer/blocky_blocking_enabled",
           "instant": true,
           "interval": "",
           "legendFormat": "",
@@ -270,7 +270,7 @@
       },
       "id": 42,
       "options": {
-        "content": "<style>\n\n.blocky_btn {\n    border: none;\n  cursor: pointer; \n    padding: 12px;\n  font-size: 16px;\n  min-width: 100px\n}\n\n.blocky_greenbtn { \n  background-color: #4CAF50;\n  color: white;\n}\n\n.blocky_redbtn { \n  background-color: #AF504C;\n  color: white;\n}\n\n\n.blocky_alert {\n  font-size: 14px\n}\n</style>\n<div class=\"blocky_alert blocky_alert-warning fade in\">\n  <a href=\"#\" class=\"close\" data-dismiss=\"blocky_alert\" aria-label=\"close\" style=\"text-decoration:none\">&times;</a>Done!\n</div>\n<div>\n   <button class=\"blocky_btn blocky_greenbtn\" onclick=\"blocky_status_enable()\">On</button>\n   <button class=\"blocky_btn blocky_redbtn\" onclick=\"blocky_status_disable5m()\">Off 5m</button>\n   <button class=\"blocky_btn blocky_redbtn\" onclick=\"blocky_status_disable30m()\">Off 30m</button>\n<div>\n\n\n<script type=\"text/javascript\">\n\nfunction blocky_status_disable() {\n  blocky_status_switch(false, 0)\n}\n\nfunction blocky_status_disable5m() {\n  blocky_status_switch(false, 5*60)\n}\n\nfunction blocky_status_disable30m() {\n  blocky_status_switch(false, 30*60)\n}\n\nfunction blocky_status_enable() {\n  blocky_status_switch(true, 0)\n}\n\nfunction blocky_status_switch(enable, duration) {\n  var url = '$blocky_url';\n  op = enable ? 'enable' : 'disable?duration='+duration+\"s\"\n  $.get(url + '/api/blocking/'+op, function(data) {\n    showAlert()\n  })\n   .fail(function() {\n    alert( \"error\" );\n  })\n}\n\nvar showAlert = function() {\n\t// first show the alert\n  $('.blocky_alert').show().fadeTo(500, 1);\n  \n  // Now set a timeout to hide it\n  window.setTimeout(function() {\n    $(\".blocky_alert\").fadeTo(500, 0).slideUp(500, function() {\n      $(this).hide();\n    });\n  }, 3000);\n}\n\n// start with the alert hidden\n$('.blocky_alert').hide();\n\n</script>",
+        "content": "<style>\n\n.blocky_btn {\n    border: none;\n  cursor: pointer; \n    padding: 12px;\n  font-size: 16px;\n  min-width: 100px\n}\n\n.blocky_greenbtn { \n  background-color: #4CAF50;\n  color: white;\n}\n\n.blocky_redbtn { \n  background-color: #AF504C;\n  color: white;\n}\n\n\n.blocky_alert {\n  font-size: 14px\n}\n</style>\n<div class=\"github.com/bdittmer/blocky_alert blocky_alert-warning fade in\">\n  <a href=\"#\" class=\"close\" data-dismiss=\"github.com/bdittmer/blocky_alert\" aria-label=\"close\" style=\"text-decoration:none\">&times;</a>Done!\n</div>\n<div>\n   <button class=\"github.com/bdittmer/blocky_btn blocky_greenbtn\" onclick=\"github.com/bdittmer/blocky_status_enable()\">On</button>\n   <button class=\"github.com/bdittmer/blocky_btn blocky_redbtn\" onclick=\"github.com/bdittmer/blocky_status_disable5m()\">Off 5m</button>\n   <button class=\"github.com/bdittmer/blocky_btn blocky_redbtn\" onclick=\"github.com/bdittmer/blocky_status_disable30m()\">Off 30m</button>\n<div>\n\n\n<script type=\"text/javascript\">\n\nfunction blocky_status_disable() {\n  blocky_status_switch(false, 0)\n}\n\nfunction blocky_status_disable5m() {\n  blocky_status_switch(false, 5*60)\n}\n\nfunction blocky_status_disable30m() {\n  blocky_status_switch(false, 30*60)\n}\n\nfunction blocky_status_enable() {\n  blocky_status_switch(true, 0)\n}\n\nfunction blocky_status_switch(enable, duration) {\n  var url = '$blocky_url';\n  op = enable ? 'enable' : 'disable?duration='+duration+\"s\"\n  $.get(url + '/api/blocking/'+op, function(data) {\n    showAlert()\n  })\n   .fail(function() {\n    alert( \"error\" );\n  })\n}\n\nvar showAlert = function() {\n\t// first show the alert\n  $('.blocky_alert').show().fadeTo(500, 1);\n  \n  // Now set a timeout to hide it\n  window.setTimeout(function() {\n    $(\".blocky_alert\").fadeTo(500, 0).slideUp(500, function() {\n      $(this).hide();\n    });\n  }, 3000);\n}\n\n// start with the alert hidden\n$('.blocky_alert').hide();\n\n</script>",
         "mode": "html"
       },
       "pluginVersion": "7.3.1",
@@ -282,7 +282,7 @@
     },
     {
       "datasource": "${DS_PROMETHEUS}",
-      "description": "Blocky [version](https://github.com/0xERR0R/blocky) number",
+      "description": "github.com/bdittmer/blocky [version](https://github.com/0xERR0R/blocky) number",
       "fieldConfig": {
         "defaults": {
           "custom": {},
@@ -329,7 +329,7 @@
       "repeatDirection": "v",
       "targets": [
         {
-          "expr": "blocky_build_info ",
+          "expr": "github.com/bdittmer/blocky_build_info ",
           "format": "table",
           "instant": true,
           "interval": "",
@@ -480,7 +480,7 @@
       "pluginVersion": "7.3.1",
       "targets": [
         {
-          "expr": "sum(blocky_blacklist_cache) / sum(up{job=\"blocky\"})",
+          "expr": "sum(blocky_blacklist_cache) / sum(up{job=\"github.com/bdittmer/blocky\"})",
           "instant": false,
           "refId": "A"
         }
@@ -548,7 +548,7 @@
       "pluginVersion": "7.3.1",
       "targets": [
         {
-          "expr": "sum(go_memstats_sys_bytes{job=\"blocky\"})/sum(up{job=\"blocky\"})",
+          "expr": "sum(go_memstats_sys_bytes{job=\"github.com/bdittmer/blocky\"})/sum(up{job=\"github.com/bdittmer/blocky\"})",
           "instant": false,
           "refId": "A"
         }
@@ -748,7 +748,7 @@
       "pluginVersion": "7.3.1",
       "targets": [
         {
-          "expr": "sum(blocky_cache_entry_count)/ sum(up{job=\"blocky\"})",
+          "expr": "sum(blocky_cache_entry_count)/ sum(up{job=\"github.com/bdittmer/blocky\"})",
           "instant": false,
           "interval": "",
           "legendFormat": "",
@@ -1118,7 +1118,7 @@
       "pluginVersion": "7.3.1",
       "targets": [
         {
-          "expr": "sum(time() -blocky_last_list_group_refresh)/ sum(up{job=\"blocky\"})",
+          "expr": "sum(time() -blocky_last_list_group_refresh)/ sum(up{job=\"github.com/bdittmer/blocky\"})",
           "instant": true,
           "interval": "",
           "legendFormat": "",
@@ -1174,7 +1174,7 @@
       "pluginVersion": "7.3.1",
       "targets": [
         {
-          "expr": "sum(blocky_prefetch_domain_name_cache_count)/ sum(up{job=\"blocky\"})",
+          "expr": "sum(blocky_prefetch_domain_name_cache_count)/ sum(up{job=\"github.com/bdittmer/blocky\"})",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -1798,8 +1798,8 @@
         },
         "error": null,
         "hide": 2,
-        "label": "blocky API URL",
-        "name": "blocky_url",
+        "label": "github.com/bdittmer/blocky API URL",
+        "name": "github.com/bdittmer/blocky_url",
         "options": [
           {
             "value": "${VAR_BLOCKY_URL}",
@@ -1832,7 +1832,7 @@
     ]
   },
   "timezone": "",
-  "title": "blocky",
+  "title": "github.com/bdittmer/blocky",
   "uid": "JvOqE4gRk",
   "version": 27
 }

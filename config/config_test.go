@@ -1,10 +1,11 @@
 package config
 
 import (
-	. "blocky/log"
 	"io/ioutil"
 	"net"
 	"os"
+
+	. "github.com/bdittmer/blocky/log"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/ginkgo/extensions/table"
@@ -47,7 +48,7 @@ var _ = Describe("Config", func() {
 		When("config file is malformed", func() {
 			It("should log with fatal and exit", func() {
 
-				dir, err := ioutil.TempDir("", "blocky")
+				dir, err := ioutil.TempDir("", "github.com/bdittmer/blocky")
 				defer os.Remove(dir)
 				Expect(err).Should(Succeed())
 				err = os.Chdir(dir)
