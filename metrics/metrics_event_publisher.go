@@ -157,7 +157,7 @@ func registerCachingEventListeners() {
 func cacheHitCount() prometheus.Counter {
 	return prometheus.NewCounter(
 		prometheus.CounterOpts{
-			Name: "github.com/bdittmer/blocky_cache_hit_count",
+			Name: "blocky_cache_hit_count",
 			Help: "Cache hit counter",
 		},
 	)
@@ -166,7 +166,7 @@ func cacheHitCount() prometheus.Counter {
 func cacheMissCount() prometheus.Counter {
 	return prometheus.NewCounter(
 		prometheus.CounterOpts{
-			Name: "github.com/bdittmer/blocky_cache_miss_count",
+			Name: "blocky_cache_miss_count",
 			Help: "Cache miss counter",
 		},
 	)
@@ -175,7 +175,7 @@ func cacheMissCount() prometheus.Counter {
 func domainPrefetchCount() prometheus.Counter {
 	return prometheus.NewCounter(
 		prometheus.CounterOpts{
-			Name: "github.com/bdittmer/blocky_prefetch_count",
+			Name: "blocky_prefetch_count",
 			Help: "Prefetch counter",
 		},
 	)
@@ -184,7 +184,7 @@ func domainPrefetchCount() prometheus.Counter {
 func domainPrefetchHitCount() prometheus.Counter {
 	return prometheus.NewCounter(
 		prometheus.CounterOpts{
-			Name: "github.com/bdittmer/blocky_prefetch_hit_count",
+			Name: "blocky_prefetch_hit_count",
 			Help: "Prefetch hit counter",
 		},
 	)
@@ -193,7 +193,7 @@ func domainPrefetchHitCount() prometheus.Counter {
 func cacheEntryCount() prometheus.Gauge {
 	return prometheus.NewGauge(
 		prometheus.GaugeOpts{
-			Name: "github.com/bdittmer/blocky_cache_entry_count",
+			Name: "blocky_cache_entry_count",
 			Help: "Number of entries in cache",
 		},
 	)
@@ -202,7 +202,7 @@ func cacheEntryCount() prometheus.Gauge {
 func prefetchDomainCacheCount() prometheus.Gauge {
 	return prometheus.NewGauge(
 		prometheus.GaugeOpts{
-			Name: "github.com/bdittmer/blocky_prefetch_domain_name_cache_count",
+			Name: "blocky_prefetch_domain_name_cache_count",
 			Help: "Number of entries in domain cache",
 		},
 	)

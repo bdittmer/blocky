@@ -79,7 +79,7 @@ func NewMetricsResolver(cfg config.PrometheusConfig) ChainedResolver {
 func totalQueriesMetric() *prometheus.CounterVec {
 	return prometheus.NewCounterVec(
 		prometheus.CounterOpts{
-			Name: "github.com/bdittmer/blocky_query_total",
+			Name: "blocky_query_total",
 			Help: "Number of total queries",
 		}, []string{"client", "type"},
 	)
@@ -88,7 +88,7 @@ func totalQueriesMetric() *prometheus.CounterVec {
 func totalErrorMetric() prometheus.Counter {
 	return prometheus.NewCounter(
 		prometheus.CounterOpts{
-			Name: "github.com/bdittmer/blocky_error_total",
+			Name: "blocky_error_total",
 			Help: "Number of total errors",
 		},
 	)
@@ -97,7 +97,7 @@ func totalErrorMetric() prometheus.Counter {
 func durationHistogram() *prometheus.HistogramVec {
 	return prometheus.NewHistogramVec(
 		prometheus.HistogramOpts{
-			Name:    "github.com/bdittmer/blocky_request_duration_ms",
+			Name:    "blocky_request_duration_ms",
 			Help:    "Request duration distribution",
 			Buckets: []float64{5, 10, 20, 30, 50, 75, 100, 200, 500, 1000, 2000},
 		},
@@ -108,7 +108,7 @@ func durationHistogram() *prometheus.HistogramVec {
 func totalResponseMetric() *prometheus.CounterVec {
 	return prometheus.NewCounterVec(
 		prometheus.CounterOpts{
-			Name: "github.com/bdittmer/blocky_response_total",
+			Name: "blocky_response_total",
 			Help: "Number of total responses",
 		}, []string{"reason", "response_code", "response_type"},
 	)
