@@ -1,10 +1,11 @@
 package stats
 
 import (
-	"blocky/util"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/bdittmer/blocky/util"
 )
 
 const (

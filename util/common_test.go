@@ -1,11 +1,12 @@
 package util
 
 import (
-	. "blocky/log"
 	"errors"
 	"fmt"
 	"net"
 	"strings"
+
+	. "github.com/bdittmer/blocky/log"
 
 	"github.com/miekg/dns"
 	"github.com/sirupsen/logrus"

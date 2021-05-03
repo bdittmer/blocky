@@ -1,11 +1,12 @@
 package resolver
 
 import (
-	"blocky/config"
-	"blocky/util"
 	"fmt"
 	"net"
 	"strings"
+
+	"github.com/bdittmer/blocky/config"
+	"github.com/bdittmer/blocky/util"
 
 	"github.com/miekg/dns"
 	"github.com/sirupsen/logrus"

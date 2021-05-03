@@ -1,9 +1,6 @@
 package resolver
 
 import (
-	"blocky/config"
-	. "blocky/log"
-	"blocky/util"
 	"bufio"
 	"encoding/csv"
 	"errors"
@@ -13,6 +10,10 @@ import (
 	"os"
 	"path/filepath"
 	"time"
+
+	"github.com/bdittmer/blocky/config"
+	. "github.com/bdittmer/blocky/log"
+	"github.com/bdittmer/blocky/util"
 
 	"github.com/miekg/dns"
 	. "github.com/onsi/ginkgo"

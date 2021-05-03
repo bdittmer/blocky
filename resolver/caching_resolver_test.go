@@ -1,11 +1,12 @@
 package resolver
 
 import (
-	"blocky/config"
-	. "blocky/evt"
-	. "blocky/helpertest"
-	"blocky/util"
 	"time"
+
+	"github.com/bdittmer/blocky/config"
+	. "github.com/bdittmer/blocky/evt"
+	. "github.com/bdittmer/blocky/helpertest"
+	"github.com/bdittmer/blocky/util"
 
 	"github.com/miekg/dns"
 	. "github.com/onsi/ginkgo"

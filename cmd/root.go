@@ -1,10 +1,11 @@
 package cmd
 
 import (
-	"blocky/config"
-	"blocky/log"
 	"fmt"
 	"os"
+
+	"github.com/bdittmer/blocky/config"
+	"github.com/bdittmer/blocky/log"
 
 	"github.com/spf13/cobra"
 )
@@ -22,8 +23,8 @@ var (
 // NewRootCommand creates a new root cli command instance
 func NewRootCommand() *cobra.Command {
 	c := &cobra.Command{
-		Use:   "blocky",
-		Short: "blocky is a DNS proxy ",
+		Use:   "github.com/bdittmer/blocky",
+		Short: "github.com/bdittmer/blocky is a DNS proxy ",
 		Long: `A fast and configurable DNS Proxy
 and ad-blocker for local network.
 		   

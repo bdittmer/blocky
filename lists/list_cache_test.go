@@ -1,11 +1,12 @@
 package lists
 
 import (
-	"blocky/evt"
-	. "blocky/helpertest"
 	"net/http"
 	"sync/atomic"
 	"time"
+
+	"github.com/bdittmer/blocky/evt"
+	. "github.com/bdittmer/blocky/helpertest"
 
 	"net/http/httptest"
 	"os"

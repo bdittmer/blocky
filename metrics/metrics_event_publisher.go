@@ -1,10 +1,11 @@
 package metrics
 
 import (
-	"blocky/evt"
-	"blocky/lists"
-	"blocky/util"
 	"time"
+
+	"github.com/bdittmer/blocky/evt"
+	"github.com/bdittmer/blocky/lists"
+	"github.com/bdittmer/blocky/util"
 
 	"fmt"
 
@@ -30,7 +31,7 @@ func registerApplicationEventListeners() {
 func versionNumberGauge() *prometheus.GaugeVec {
 	blacklistCnt := prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
-			Name: "blocky_build_info",
+			Name: "github.com/bdittmer/blocky_build_info",
 			Help: "Version number and build info",
 		}, []string{"version", "build_time"},
 	)
@@ -74,7 +75,7 @@ func registerBlockingEventListeners() {
 
 func enabledGauge() prometheus.Gauge {
 	enabledGauge := prometheus.NewGauge(prometheus.GaugeOpts{
-		Name: "blocky_blocking_enabled",
+		Name: "github.com/bdittmer/blocky_blocking_enabled",
 		Help: "Blocking status",
 	})
 	enabledGauge.Set(1)
@@ -85,7 +86,7 @@ func enabledGauge() prometheus.Gauge {
 func blacklistGauge() *prometheus.GaugeVec {
 	blacklistCnt := prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
-			Name: "blocky_blacklist_cache",
+			Name: "github.com/bdittmer/blocky_blacklist_cache",
 			Help: "Number of entries in the blacklist cache",
 		}, []string{"group"},
 	)
@@ -96,7 +97,7 @@ func blacklistGauge() *prometheus.GaugeVec {
 func whitelistGauge() *prometheus.GaugeVec {
 	whitelistCnt := prometheus.NewGaugeVec(
 		prometheus.GaugeOpts{
-			Name: "blocky_whitelist_cache",
+			Name: "github.com/bdittmer/blocky_whitelist_cache",
 			Help: "Number of entries in the whitelist cache",
 		}, []string{"group"},
 	)
@@ -107,7 +108,7 @@ func whitelistGauge() *prometheus.GaugeVec {
 func lastListGroupRefresh() prometheus.Gauge {
 	return prometheus.NewGauge(
 		prometheus.GaugeOpts{
-			Name: "blocky_last_list_group_refresh",
+			Name: "github.com/bdittmer/blocky_last_list_group_refresh",
 			Help: "Timestamp of last list refresh",
 		},
 	)
@@ -156,7 +157,7 @@ func registerCachingEventListeners() {
 func cacheHitCount() prometheus.Counter {
 	return prometheus.NewCounter(
 		prometheus.CounterOpts{
-			Name: "blocky_cache_hit_count",
+			Name: "github.com/bdittmer/blocky_cache_hit_count",
 			Help: "Cache hit counter",
 		},
 	)
@@ -165,7 +166,7 @@ func cacheHitCount() prometheus.Counter {
 func cacheMissCount() prometheus.Counter {
 	return prometheus.NewCounter(
 		prometheus.CounterOpts{
-			Name: "blocky_cache_miss_count",
+			Name: "github.com/bdittmer/blocky_cache_miss_count",
 			Help: "Cache miss counter",
 		},
 	)
@@ -174,7 +175,7 @@ func cacheMissCount() prometheus.Counter {
 func domainPrefetchCount() prometheus.Counter {
 	return prometheus.NewCounter(
 		prometheus.CounterOpts{
-			Name: "blocky_prefetch_count",
+			Name: "github.com/bdittmer/blocky_prefetch_count",
 			Help: "Prefetch counter",
 		},
 	)
@@ -183,7 +184,7 @@ func domainPrefetchCount() prometheus.Counter {
 func domainPrefetchHitCount() prometheus.Counter {
 	return prometheus.NewCounter(
 		prometheus.CounterOpts{
-			Name: "blocky_prefetch_hit_count",
+			Name: "github.com/bdittmer/blocky_prefetch_hit_count",
 			Help: "Prefetch hit counter",
 		},
 	)
@@ -192,7 +193,7 @@ func domainPrefetchHitCount() prometheus.Counter {
 func cacheEntryCount() prometheus.Gauge {
 	return prometheus.NewGauge(
 		prometheus.GaugeOpts{
-			Name: "blocky_cache_entry_count",
+			Name: "github.com/bdittmer/blocky_cache_entry_count",
 			Help: "Number of entries in cache",
 		},
 	)
@@ -201,7 +202,7 @@ func cacheEntryCount() prometheus.Gauge {
 func prefetchDomainCacheCount() prometheus.Gauge {
 	return prometheus.NewGauge(
 		prometheus.GaugeOpts{
-			Name: "blocky_prefetch_domain_name_cache_count",
+			Name: "github.com/bdittmer/blocky_prefetch_domain_name_cache_count",
 			Help: "Number of entries in domain cache",
 		},
 	)

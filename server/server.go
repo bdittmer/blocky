@@ -1,20 +1,22 @@
 package server
 
 import (
-	"blocky/api"
-	"blocky/config"
-	"blocky/log"
-	"blocky/metrics"
-	"blocky/resolver"
 	"net/http"
 	"runtime"
 	"runtime/debug"
 	"strings"
 	"time"
 
-	"blocky/util"
+	"github.com/bdittmer/blocky/api"
+	"github.com/bdittmer/blocky/config"
+	"github.com/bdittmer/blocky/log"
+	"github.com/bdittmer/blocky/metrics"
+	"github.com/bdittmer/blocky/resolver"
+
 	"fmt"
 	"net"
+
+	"github.com/bdittmer/blocky/util"
 
 	"github.com/go-chi/chi"
 	"github.com/miekg/dns"

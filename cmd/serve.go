@@ -1,10 +1,6 @@
 package cmd
 
 import (
-	"blocky/config"
-	"blocky/evt"
-	"blocky/server"
-	"blocky/util"
 	"context"
 	"fmt"
 	"net"
@@ -14,7 +10,12 @@ import (
 	"syscall"
 	"time"
 
-	"blocky/log"
+	"github.com/bdittmer/blocky/config"
+	"github.com/bdittmer/blocky/evt"
+	"github.com/bdittmer/blocky/server"
+	"github.com/bdittmer/blocky/util"
+
+	"github.com/bdittmer/blocky/log"
 
 	"github.com/spf13/cobra"
 )

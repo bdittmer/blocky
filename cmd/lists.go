@@ -1,10 +1,11 @@
 package cmd
 
 import (
-	"blocky/api"
-	"blocky/log"
 	"io/ioutil"
 	"net/http"
+
+	"github.com/bdittmer/blocky/api"
+	"github.com/bdittmer/blocky/log"
 
 	"github.com/spf13/cobra"
 )
